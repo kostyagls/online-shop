@@ -48,13 +48,13 @@
                             </div>
                         </div>
                     <?php endforeach; ?>
-                    
-                    <?php echo $pagination->get(); ?>
-                    
-                   
+
 
                 </div><!--features_items-->
             </div>
+            
+                <?php echo $pagination->get(); ?>
+            
         </div>
     </div>
 </section>
