@@ -21,7 +21,6 @@
                             </div>
                         <?php endforeach; ?>
                     </div>
-
                 </div>
             </div>
 
@@ -50,11 +49,10 @@
                             </div>
                         </div>
                     <?php endforeach; ?>
-                    
-                    <?php echo $pagination->get(); ?>
-
-
                 </div><!--features_items-->
+            </div>
+            <div style="text-align: center">
+                <?php echo $pagination->get(); ?>
             </div>
         </div>
     </div>

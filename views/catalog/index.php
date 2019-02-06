@@ -52,9 +52,9 @@
 
                 </div><!--features_items-->
             </div>
-            
+            <div style="text-align: center">
                 <?php echo $pagination->get(); ?>
-            
+            </div>
         </div>
     </div>
 </section>
