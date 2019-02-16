@@ -2,11 +2,10 @@
 
 abstract class AdminBase { 
     
-    public static function checkAdmin() { 
-        
+    public static function checkAdmin() {
         $userId = User::checkLogger();
-        
         $user = User::getUserById($userId);
+        
         if ($user['role'] == 'admin') { 
             return TRUE;
         } 
@@ -14,16 +13,14 @@ abstract class AdminBase {
         die('Access denied');
     }
     
-    public static function checkAdminWithoutDie() { 
-        
+    public static function checkAdminWithoutDie() {
         $userId = User::checkLogger();
-        
         $user = User::getUserById($userId);
+        
         if ($user['role'] == 'admin') { 
             return TRUE;
         } 
         
         return FALSE;
-    }
-    
+    } 
 }

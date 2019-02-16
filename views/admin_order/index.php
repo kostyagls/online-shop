@@ -16,8 +16,6 @@
             <h4>Список заказов</h4>
 
             <br/>
-
-            
             <table class="table-bordered table-striped table">
                 <tr>
                     <th>ID заказа</th>
@@ -46,7 +44,6 @@
                     </tr>
                 <?php endforeach; ?>
             </table>
-
         </div>
     </div>
 </section>

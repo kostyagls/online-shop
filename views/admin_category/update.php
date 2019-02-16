@@ -3,9 +3,7 @@
 <section>
     <div class="container">
         <div class="row">
-
             <br/>
-
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
                     <li><a href="/online_shop/admin">Админпанель</a></li>
@@ -13,12 +11,8 @@
                     <li class="active">Редактировать категорию</li>
                 </ol>
             </div>
-
-
             <h4>Редактировать категорию</h4>
-
             <br/>
-
             <?php if (isset($errors) && is_array($errors)): ?>
                 <ul>
                     <?php foreach ($errors as $error): ?>
@@ -26,7 +20,6 @@
                     <?php endforeach; ?>
                 </ul>
             <?php endif; ?>
-
             <div class="col-lg-4">
                 <div class="login-form">
                     <form action="#" method="post">
@@ -48,7 +41,6 @@
                         <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
 
                         <br/><br/>
-
                     </form>
                 </div>
             </div>

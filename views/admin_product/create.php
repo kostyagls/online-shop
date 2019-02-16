@@ -14,7 +14,6 @@
                 </ol>
             </div>
 
-
             <h4>Добавить новый товар</h4>
 
             <br/>
@@ -26,7 +25,6 @@
                     <?php endforeach; ?>
                 </ul>
             <?php endif; ?>
-
             <div class="col-lg-4">
                 <div class="login-form">
                     <form action="#" method="post" enctype="multipart/form-data">

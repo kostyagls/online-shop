@@ -5,6 +5,7 @@ class Cart {
     public static function addProduct($id) {
         $id = intval($id);
         $productsInCart = array();
+         
         if (isset($_SESSION['products'])) {
             $productsInCart = $_SESSION['products'];
         }
@@ -42,14 +43,15 @@ class Cart {
     public static function getTotalPrice($products) {
         $totalPrice = 0;
         $productsInCart = self::getProducts();
+        
         foreach ($products as $item) {
             $totalPrice = $totalPrice + $item['price'] * $productsInCart[$item['id']];
         }
+        
         return $totalPrice;
     }
 
     public static function clear() {
-
         if (isset($_SESSION['products'])) {
             unset($_SESSION['products']);
         }

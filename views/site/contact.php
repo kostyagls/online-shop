@@ -1,12 +1,9 @@
 <?php include_once ROOT . '/views/layouts/header.php'; ?>
 
-
 <section>
     <div class="container">
         <div class="row">
-
             <div class="col-sm-4 col-sm-offset-4 padding-right">
-
                 <?php if ($result): ?>
                     <p> Письмо отправленно! </p>
                 <?php else: ?>
@@ -17,27 +14,20 @@
                             <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>
-
-
                     <div class="signup-form"><!--sign up form-->
-
                         <h2> Обратная связь </h2> 
                         <h5> Есть вопрос? Напишите нам </h5>
                         <br/>
                         <form action="#" method="post">
                             <p> Ваша почта: </p>
-                            <input type="email" name="userEmail" placeholder="email" value="<?php echo $userEmail; ?>"/>
+                            <input type="email" name="userEmail" placeholder="email" value=""/>
                             <p> Сообщение: </p>
-                            <input type="text" name="userText" placeholder="Сообщение" value="<?php echo $userText; ?>"/>
+                            <input type="text" name="userText" placeholder="Сообщение" value=""/>
                             <br/>
                             <input type="submit" name="submit" class="btn btn-default" value="Отправить"/>
                         </form>
-
-
                     </div><!--/sign up form-->
                 <?php endif; ?>
-
-
                 <br/>
                 <br/>
             </div>

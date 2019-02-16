@@ -13,14 +13,8 @@
                     <li class="active">Просмотр заказа</li>
                 </ol>
             </div>
-
-
             <h4>Просмотр заказа #<?php echo $order['id']; ?></h4>
             <br/>
-
-
-
-
             <h5>Информация о заказе</h5>
             <table class="table-admin-small table-bordered table-striped table">
                 <tr>
@@ -44,9 +38,7 @@
                     <td><?php echo $order['date']; ?></td>
                 </tr>
             </table>
-
             <h5>Товары в заказе</h5>
-
             <table class="table-admin-medium table-bordered table-striped table ">
                 <tr>
                     <th>ID товара</th>
@@ -65,11 +57,8 @@
                     </tr>
                 <?php endforeach; ?>
             </table>
-
             <a href="/online_shop/admin/order/" class="btn btn-default back"><i class="fa fa-arrow-left"></i> Назад</a>
         </div>
-
-
 </section>
 
 <?php include ROOT . '/views/layouts/footer.php'; ?>

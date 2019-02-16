@@ -7,7 +7,6 @@
                     <h2>Каталог</h2>
                     <div class="panel-group category-products">
                         <?php foreach ($categories as $item): ?>
-
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
@@ -19,10 +18,8 @@
                             </div>
                         <?php endforeach; ?>
                     </div>
-
                 </div>
             </div>
-
             <div class="col-sm-9 padding-right">
                 <div class="features_items"><!--features_items-->
                     <h2 class="title text-center">Последние товары</h2>
@@ -48,8 +45,6 @@
                             </div>
                         </div>
                     <?php endforeach; ?>
-
-
                 </div><!--features_items-->
             </div>
             <div style="text-align: center">

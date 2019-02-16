@@ -14,15 +14,16 @@ class Category {
             $categoryList[$id]['name'] = $row['name'];
             $id++;
         }
+        
         return $categoryList;
     }
 
     public static function getCategoriesListAdmin() {
         $db = Db::getConnection();
-
-        $result = $db->query('SELECT id, name, sort_order, status FROM category ORDER BY sort_order ASC');
-
         $categoryList = array();
+        $result = $db->query('SELECT id, name, sort_order, status '
+                . 'FROM category ORDER BY sort_order ASC');
+        
         $i = 0;
         while ($row = $result->fetch()) {
             $categoryList[$i]['id'] = $row['id'];
@@ -31,13 +32,12 @@ class Category {
             $categoryList[$i]['status'] = $row['status'];
             $i++;
         }
+        
         return $categoryList;
     }
 
     public static function createCategory($options) {
-
         $db = Db::getConnection();
-
         $query = 'INSERT INTO category '
                 . '(name, sort_order, status) '
                 . 'VALUES '
@@ -46,19 +46,19 @@ class Category {
         $result->bindParam(':name', $options['name'], PDO::PARAM_STR);
         $result->bindParam(':sort_order', $options['sort_order'], PDO::PARAM_INT);
         $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
+        
         return $result->execute();
     }
 
     public static function getCategoryById($id) {
         $db = Db::getConnection();
-
         $query = 'SELECT * FROM category WHERE id = :id ORDER BY sort_order ASC';
         $result = $db->prepare($query);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
          $result->setFetchMode(PDO::FETCH_ASSOC);
          $result->execute();
-         return $result->fetch();
          
+         return $result->fetch();
     }
     
     public static function updateCategoryById($id, $options) { 
@@ -70,20 +70,20 @@ class Category {
                 status = :status
             WHERE id = :id";
         $result = $db->prepare($query);
-         $result->bindParam(':id', $id, PDO::PARAM_STR);
+        $result->bindParam(':id', $id, PDO::PARAM_STR);
         $result->bindParam(':name', $options['name'], PDO::PARAM_STR);
         $result->bindParam(':sort_order', $options['sort_order'], PDO::PARAM_INT);
         $result->bindParam(':status', $options['status'], PDO::PARAM_INT);
+        
         return $result->execute();
     }
     
      public static function deleteCategoryById($id) {
         $db = Db::getConnection();
-
         $query = 'DELETE FROM category WHERE id = :id';
         $result = $db->prepare($query);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
+        
         return $result->execute();
     }
-
 }

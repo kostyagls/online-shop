@@ -12,9 +12,7 @@
                     <li class="active">Управление товарами</li>
                 </ol>
             </div>
-
             <a href="/online_shop/admin/product/create" class="btn btn-default back"><i class="fa fa-plus"></i> Добавить товар</a>
-            
             <h4>Список товаров</h4>
 
             <br/>
@@ -39,12 +37,9 @@
                     </tr>
                 <?php endforeach; ?>
             </table>
-
         </div>
     </div>
 </section>
 
-
-
-    <?php include ROOT . '/views/layouts/footer_admin.php'; ?>
+<?php include ROOT . '/views/layouts/footer_admin.php'; ?>
 

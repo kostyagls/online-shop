@@ -3,22 +3,16 @@
 <section>
     <div class="container">
         <div class="row">
-
             <br/>
-
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
                     <li><a href="/online_shop/admin">Админпанель</a></li>
                     <li class="active">Управление категориями</li>
                 </ol>
             </div>
-
             <a href="/online_shop/admin/category/create" class="btn btn-default back"><i class="fa fa-plus"></i> Добавить категорию</a>
-            
             <h4>Список категорий</h4>
-
             <br/>
-
             <table class="table-bordered table-striped table">
                 <tr>
                     <th>ID категории</th>
@@ -33,18 +27,15 @@
                         <td><?php echo $category['id']; ?></td>
                         <td><?php echo $category['name']; ?></td>
                         <td><?php echo $category['sort_order']; ?></td>
-                        <td><?php echo ($category['status'] == 1) ? 'Отображается' : 'Скрыт';?></td>  
+                        <td><?php echo ($category['status'] == 1) ? 'Отображается' : 'Скрыт'; ?></td>  
                         <td><a href="/online_shop/admin/category/update/<?php echo $category['id']; ?>" title="Редактировать"><i class="fa fa-pencil-square-o"></i></a></td>
                         <td><a href="/online_shop/admin/category/delete/<?php echo $category['id']; ?>" title="Удалить"><i class="fa fa-times"></i></a></td>
                     </tr>
                 <?php endforeach; ?>
             </table>
-
         </div>
     </div>
 </section>
 
-
-
-    <?php include ROOT . '/views/layouts/footer_admin.php'; ?>
+<?php include ROOT . '/views/layouts/footer_admin.php'; ?>
 

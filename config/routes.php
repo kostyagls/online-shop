@@ -1,4 +1,5 @@
 <?php
+
 return array(
     'product/([0-9]+)' => 'product/view/$1',
     
@@ -43,6 +44,6 @@ return array(
     'about' => 'site/about',
     'contact' => 'site/contact',
     '[a-z]+' => 'site/index',
-    '' => 'site/index', // actionIndex siteController
+    '' => 'site/index', 
 );
 

@@ -14,7 +14,6 @@
                 </ol>
             </div>
 
-
             <h4>Редактировать товар</h4>
 
             <br/>
@@ -26,7 +25,6 @@
                     <?php endforeach; ?>
                 </ul>
             <?php endif; ?>
-
             <div class="col-lg-4">
                 <div class="login-form">
                     <form action="#" method="post" enctype="multipart/form-data">
@@ -57,7 +55,7 @@
                         <input type="text" name="brand" placeholder="" value="<?php echo $productById['brand']; ?>">
 
                         <p>Изображение товара</p>
-                        <img src="<?php // echo Product::getImage($product['id']); ?>" width="200" alt="" />
+                       <img src="<?php echo Product::getImage($productById['id']); ?>" width="300" alt="" />
                         <input type="file" name="image" placeholder="" value="">
 
                         <p>Детальное описание</p>
@@ -100,11 +98,9 @@
                         <input type="submit" name="submit" class="btn btn-default" value="Редактировать">
 
                         <br/><br/>
-
                     </form>
                 </div>
             </div>
-
         </div>
     </div>
 </section>

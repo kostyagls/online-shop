@@ -1,7 +1,6 @@
 
 <div class="page-buffer"></div>
 </div>
-
 <div class="content"></div>
 <footer id="footer" class="page-footer"><!--Footer-->
     <div class="footer-bottom">
@@ -13,7 +12,6 @@
         </div>
     </div>
 </footer><!--/Footer-->
-
 
 <script src="/template/js/jquery.js"></script>
 <script src="/template/js/jquery.cycle2.min.js"></script>
@@ -34,6 +32,5 @@
         });
     });
 </script>
-
 </body>
 </html>

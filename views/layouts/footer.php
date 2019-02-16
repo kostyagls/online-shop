@@ -8,18 +8,11 @@
         </div>
     </div>
 </footer><!--/Footer-->
-
 <!--slider-->
 <script src="/online_shop/template/js/jquery.js"></script>
 <script src="/online_shop/template/js/jquery.cycle2.min.js"></script>
 <script src="/online_shop/template/js/jquery.cycle2.carousel.min.js"></script>
-
-
 <!--slider-->
-
-
-
-
 <script src="/online_shop/template/js/bootstrap.min.js"></script>
 <script src="/online_shop/template/js/jquery.scrollUp.min.js"></script>
 <script src="/online_shop/template/js/price-range.js"></script>

@@ -3,27 +3,24 @@
 class CabinetController {
 
     public function actionIndex() {
-
         $userId = User::CheckLogger();
         $user = User::getUserById($userId);
+        
         require_once ROOT . '/views/cabinet/index.php';
-
         return true;
     }
 
     public function actionEdit() {
-
         $userId = User::CheckLogger();
         $user = User::getUserById($userId);
 
         $name = $user['name'];
         $password = $user['password'];
-
         $result = FALSE;
+        
         if (isset($_POST['submit'])) {
             $name = $_POST['name'];
             $password = $_POST['password'];
-
             $errors = FALSE;
 
             if (!User::checkName($name)) {
@@ -43,8 +40,7 @@ class CabinetController {
         return TRUE;
     }
     
-    public function actionHistory() { 
-        
+    public function actionHistory() {
         $userId = User::CheckLogger();
         $orderHistory = Order::getOrderByUserId($userId);
        
@@ -52,8 +48,7 @@ class CabinetController {
         return true ;
     }
 
-    public function actionView($id) { 
-        
+    public function actionView($id) {
         $userId = User::CheckLogger();
         $order = Order::getOrderById($id);
         $productsQuantity = json_decode($order['products'], true);
@@ -63,5 +58,4 @@ class CabinetController {
         require_once(ROOT . '/views/cabinet/view.php');
         return true;
     }
-    
 }

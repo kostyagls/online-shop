@@ -15,15 +15,11 @@
                             </div>
                         <?php endforeach; ?>
                     </div><!--/category-products-->
-
                 </div>
             </div>
-
-
             <div class="col-sm-9 padding-right">
                 <div class="features_items">
                     <h2 class="title text-center">Корзина</h2>
-
                     <?php if ($productsInCart): ?>
                         <p>Вы выбрали такие товары:</p>
                         <table class="table-bordered table-striped table">
@@ -52,28 +48,16 @@
                                 <td colspan="3">Общая стоимость:</td>
                                 <td><?php echo $totalPrice; ?></td>
                             </tr>
-
                         </table>
                         <a class="btn btn-default checkout" href="/online_shop/cart/checkout"><i class="fa fa-shopping-cart"></i> Оформить заказ</a>
                     <?php else: ?>
                         <p>Корзина пуста</p>
                     <?php endif; ?>
-                        
-                  
-
                 </div>
-               
-
-
-
-
             </div>
         </div>
     </div>
 </section>
-
-
 <br/>
 <br/>
-
 <?php include ROOT . '/views/layouts/footer.php'; ?> 

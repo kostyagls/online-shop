@@ -15,24 +15,15 @@
                             </div>
                         <?php endforeach; ?>
                     </div><!--/category-products-->
-
                 </div>
             </div>
-
-
             <div class="col-sm-9 padding-right">
                 <div class="features_items">
                     <h2 class="title text-center">Корзина</h2>
-
-
                     <?php if ($result): ?>
-
                         <p>Заказ оформлен. Мы Вам перезвоним.</p>
-
                     <?php else: ?>
-
                         <p>Выбрано товаров: <?php echo $totalQuantity; ?>, на сумму: <?php echo $totalPrice; ?>, грн.</p><br/>
-
                         <div class="col-sm-4">
                             <?php if (isset($errors) && is_array($errors)): ?>
                                 <ul>
@@ -41,9 +32,7 @@
                                     <?php endforeach; ?>
                                 </ul>
                             <?php endif; ?>
-
                             <p>Для оформления заказа заполните форму. Наш менеджер свяжется с Вами.</p>
-
                             <div class="login-form">
                                 <form action="#" method="post">
 
@@ -51,10 +40,10 @@
                                     <input type="text" name="userName" placeholder="" value="<?php echo $userName; ?>"/>
 
                                     <p>Номер телефона</p>
-                                    <input type="text" name="userPhone" placeholder="" value="<?php echo $userPhone; ?>"/>
+                                    <input type="text" name="userPhone" placeholder="Номер" value=""/>
 
                                     <p>Комментарий к заказу</p>
-                                    <input type="text" name="userComment" placeholder="Сообщение" value="<?php echo $userComment; ?>"/>
+                                    <input type="text" name="userComment" placeholder="Сообщение" value=""/>
 
                                     <br/>
                                     <br/>
@@ -62,14 +51,11 @@
                                 </form>
                             </div>
                         </div>
-
                     <?php endif; ?>
-
                 </div>
             </div>
         </div>
 </section>
-
 
 <br/>
 <br/>
